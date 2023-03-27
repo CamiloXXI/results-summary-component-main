@@ -1,0 +1,74 @@
+* {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #cccccc;
+}
+
+main {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: end;
+}
+
+figure {
+  grid-column: span 1; /* Cada elemento ocupa 1 columna */
+  text-align: center; /* Alinear el contenido al centro */
+}
+
+.figureResult {
+  width: 25rem;
+  height: 25rem;
+  margin-right: 0px;
+  background: rgb(45, 42, 232);
+  background: linear-gradient(
+    0deg,
+    rgba(45, 42, 232, 1) 70%,
+    rgba(120, 86, 255, 1) 100%
+  );
+}
+
+.figureSummary {
+  width: 25rem;
+  height: 25rem;
+  margin-left: 0px;
+  background-color: white;
+}
+
+.figureResult > figcaption {
+  margin-bottom: 20px;
+}
+
+.figureResult > figcaption > h1 {
+  color: #dad4ff;
+  font-size: 20px;
+}
+
+.total {
+  height: 150px;
+  width: 180px;
+  margin: 10px 90rem 8px 7rem;
+  border-radius: 50%;
+  background: rgb(77, 32, 201);
+  background: linear-gradient(
+    180deg,
+    rgba(77, 32, 201, 1) 10%,
+    rgba(35, 32, 201, 1) 100%
+  );
+}
+
+.total > .number {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 40px;
+  font-family: "Hanken Grotesk", sans-serif;
+  color: white;
+}
+
+.total > .of-one-hundred {
+  margin-top: 0;
+  color: hsl(241, 100%, 89%);
+}
