@@ -8,6 +8,10 @@ body {
   background-color: #cccccc;
 }
 
+main {
+  margin-top: 10rem;
+}
+
 figure {
   grid-column: span 1; /* Cada elemento ocupa 1 columna */
   text-align: center; /* Alinear el contenido al centro */
