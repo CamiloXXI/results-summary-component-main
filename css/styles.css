@@ -9,7 +9,7 @@ body {
 }
 
 main {
-  margin-top: 10rem;
+  margin-top: 18rem;
 }
 
 figure {
@@ -59,6 +59,16 @@ figure {
   color: whitesmoke;
 }
 
+main > div > .figureSummary > .button:hover {
+  background-color: hsl(224, 30%, 27%);
+  background-image: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  cursor: pointer;
+}
+
 .figureResult > figcaption {
   height: 3rem;
   margin-top: 30px;
@@ -102,7 +112,7 @@ figure {
 
 .figureResult > h2 {
   margin: 20px 0 15px 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Hanken Grotesk", sans-serif;
   font-size: 35px;
   font-weight: 700;
   color: white;
@@ -168,9 +178,6 @@ figure {
 
 .visual {
   background-color: hsl(234, 85%, 45%, 0.2);
-}
-
-.figureSummary > button:hover {
 }
 
 @media (min-width: 475px) {
