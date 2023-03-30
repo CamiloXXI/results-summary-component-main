@@ -11,11 +11,10 @@ async function data() {
     .then((data) => {
       data.forEach((capacidades) => {
         result[contador].innerHTML = `
-        <div class="capacidades">
           <img src="${capacidades.icon}" alt="">
           <p>${capacidades.category}</p>
           <p><b>${capacidades.score}</b> / 100</p>
-        </div>`;
+        `;
         contador++;
       });
     });

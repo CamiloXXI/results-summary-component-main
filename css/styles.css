@@ -8,12 +8,6 @@ body {
   background-color: #cccccc;
 }
 
-main {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: end;
-}
-
 figure {
   grid-column: span 1; /* Cada elemento ocupa 1 columna */
   text-align: center; /* Alinear el contenido al centro */
@@ -21,54 +15,202 @@ figure {
 
 .figureResult {
   width: 25rem;
-  height: 25rem;
+  height: 30rem;
+  border-radius: 8%;
   margin-right: 0px;
-  background: rgb(45, 42, 232);
+  margin-bottom: 0px;
   background: linear-gradient(
-    0deg,
-    rgba(45, 42, 232, 1) 70%,
-    rgba(120, 86, 255, 1) 100%
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
   );
 }
 
 .figureSummary {
   width: 25rem;
-  height: 25rem;
-  margin-left: 0px;
+  height: 30rem;
+  margin-left: -30px;
+  margin-top: 1rem;
+  border-radius: 8%;
   background-color: white;
+  z-index: -100;
+}
+
+.figureSummary > h1 {
+  margin-top: 30px;
+  margin-left: 60px;
+  text-align: start;
+  font-size: 25px;
+}
+
+.figureSummary > button {
+  width: 300px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: 20px;
+  border-radius: 30px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  background-color: hsl(224, 30%, 27%);
+  color: whitesmoke;
 }
 
 .figureResult > figcaption {
-  margin-bottom: 20px;
+  height: 3rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .figureResult > figcaption > h1 {
+  margin-top: 30px;
+  margin-bottom: 0px;
   color: #dad4ff;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .total {
-  height: 150px;
-  width: 180px;
-  margin: 10px 90rem 8px 7rem;
+  height: 200px;
+  width: 210px;
+  margin: 0 auto;
   border-radius: 50%;
-  background: rgb(77, 32, 201);
-  background: linear-gradient(
-    180deg,
-    rgba(77, 32, 201, 1) 10%,
-    rgba(35, 32, 201, 1) 100%
+  background-image: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
   );
 }
 
 .total > .number {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 40px;
+  padding-top: 55px;
+  font-size: 60px;
   font-family: "Hanken Grotesk", sans-serif;
   color: white;
 }
 
 .total > .of-one-hundred {
-  margin-top: 0;
+  margin-top: 5px;
   color: hsl(241, 100%, 89%);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.figureResult > h2 {
+  margin: 20px 0 15px 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  color: white;
+}
+
+.figureResult > p {
+  margin: 10px 60px 0px 60px;
+  font-size: 20px;
+  font-family: "Hanken Grotesk", sans-serif;
+  color: hsl(241, 100%, 89%);
+}
+
+.container-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-results > .result {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 8px;
+  margin-left: 28px;
+  margin-bottom: 8px;
+  border-radius: 15px;
+}
+
+.container-results > .result > img {
+  height: 30px;
+  width: auto;
+  margin-top: 10px;
+}
+
+.container-results > .result > p {
+  margin-top: 12px;
+  font-size: 18px;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.container-results > .result > p:nth-child(3) {
+  color: hsl(0, 0%, 73%);
+}
+
+.container-results > .result > p > b {
+  color: rgb(36, 44, 54);
+  margin-right: 5px;
+}
+
+.reaction {
+  background-color: hsl(0, 100%, 67%, 0.2);
+}
+
+.memory {
+  background-color: hsl(39, 100%, 56%, 0.2);
+}
+
+.verbal {
+  background-color: hsl(166, 100%, 37%, 0.2);
+}
+
+.visual {
+  background-color: hsl(234, 85%, 45%, 0.2);
+}
+
+.figureSummary > button:hover {
+}
+
+@media (min-width: 475px) {
+  main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+  }
+}
+
+@media (max-width: 475px) {
+  body,
+  main,
+  .grid-container {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-row: auto;
+  }
+
+  .figureResult {
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-bottom: 20px;
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  .figureSummary {
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-top: 10px;
+    border-radius: 0px;
+  }
 }

@@ -12,10 +12,6 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,29 +24,31 @@
   </head>
   <body>
     <main role="main">
-      <figure class="figureResult">
-        <figcaption>
-          <h1>Your Result</h1>
-        </figcaption>
-        <div class="total">
-          <p class="number">76</p>
-          <p class="of-one-hundred">of 100</p>
-        </div>
-        <h2>Great</h2>
-        <p>
-          You scored higher than 65% of the people who have taken these tests.
-          Summary Reaction 80 / 100 Memory 92 / 100 Verbal 61 / 100 Visual 72 /
-          100 Continue
-        </p>
-      </figure>
-      <figure class="figureSummary">
-        <h1>Summary</h1>
-        <div class="reaction result"></div>
-        <div class="memory result"></div>
-        <div class="verbal result"></div>
-        <div class="visual result"></div>
-        <button>Continue</button>
-      </figure>
+      <div class="grid-container">
+        <figure class="figureResult">
+          <figcaption>
+            <h1>Your Result</h1>
+          </figcaption>
+          <div class="total">
+            <p class="number">76</p>
+            <p class="of-one-hundred">of 100</p>
+          </div>
+          <h2>Great</h2>
+          <p>
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </figure>
+        <figure class="figureSummary">
+          <h1>Summary</h1>
+          <div class="container-results">
+            <div class="reaction result"></div>
+            <div class="memory result"></div>
+            <div class="verbal result"></div>
+            <div class="visual result"></div>
+          </div>
+          <button>Continue</button>
+        </figure>
+      </div>
     </main>
 
     <script src="js/main.js"></script>
